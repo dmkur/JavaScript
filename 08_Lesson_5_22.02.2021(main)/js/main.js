@@ -408,4 +408,4 @@ function Princ(name,age,shoetSize){
 
 let a = Princ(`los`,21, 37)
 findCinderella(allCindelellas)
-
+lol
