@@ -55,18 +55,108 @@
 //При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік 
 //чи меньше він ніж 18, та повідомити про це користувача
 
+// let inputEl = document.createElement(`input`)
+// let btntEl = document.createElement(`button`)
+
+// inputEl.type = `number`
+
+// btntEl.innerText = `Confirm`
+
+// document.body.appendChild(inputEl)
+// document.body.appendChild(btntEl)
+
+
+// btntEl.onclick = ev => {
+//     let value = inputEl.value
+
+//     if(value < 18) {
+//         alert(`Only 18+ content`)
+//     }else{
+//         alert(`Welcome!`)
+//     }
+// }     
 
 
 
 // - Создайте меню, которое раскрывается/сворачивается при клике
+// let a = document.getElementById(`menu`)
+// let b = document.getElementById(`subMenu`)
 
-// - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
+// let lol = true
+
+// a.onclick = ev => {
+//     if(lol){
+//         b.style.display = `none`
+//         lol = false
+//     }else{
+//         b.style.display = `block`
+//         lol = true
+//     }
+// }
+
+
+// - Создать список комментариев , пример объекта коментария - 
+//{title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 // Вывести список комментариев в документ, каждый в своем блоке.
 //  Добавьте каждому комментарию по кнопке для сворачивания его body.
+// let div = document.createElement(`div`)
 
-// - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
-// Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
-// Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+// document.body.appendChild(div)
+
+// let comentars = [
+//     {title : 'lorem', body:'lorem ipsum dolo sit ameti'},
+//     {title : 'lorem', body:'lorem ipsum dolo sit ameti'},
+//     {title : 'lorem', body:'lorem ipsum dolo sit ameti'},
+//     {title : 'lorem', body:'lorem ipsum dolo sit ameti'},
+//     {title : 'lorem', body:'lorem ipsum dolo sit ameti'},
+//     {title : 'lorem', body:'lorem ipsum dolo sit ameti'},
+// ]
+
+// comentars.forEach(item => {
+//     let divOne = document.createElement(`div`)
+//     let h3 = document.createElement(`h3`)
+//     let p = document.createElement(`p`)
+//     let btn = document.createElement(`button`)
+
+//     h3.innerText = item.title
+//     p.innerText = item.body
+//     btn.innerText = `Hide`;
+
+//     btn.onclick= ()=>{
+//         p.hidden
+//         ? p.hidden = false
+//         : p.hidden = true
+//     }
+
+//     divOne.appendChild(h3)
+//     divOne.appendChild(p)
+//     divOne.appendChild(btn)
+
+//    div.appendChild(divOne)
+    
+// })
+
+
+// - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на 
+//яку считується та виводиться на консоль інформація з цих 2х форм.
+// Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження 
+//сторінки)
+// Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі 
+///необхідні атрибути.
+let btn = document.getElementById(`btn`)
+let input1 = document.getElementById(`input1`)
+let input2 = document.getElementById(`input2`)
+let input11 = document.getElementById(`input11`)
+
+btn.onclick = ev => {
+    console.log(input1.value);
+    console.log(input2.value);
+    console.log(input11.value);
+    console.log(input22.value);
+
+    
+}
+
 
 // - Створити функцію, яка генерує таблицю.
 // Перший аргумент визначає кількість строк.
