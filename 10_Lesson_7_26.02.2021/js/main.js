@@ -143,25 +143,44 @@
 //сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі 
 ///необхідні атрибути.
-let btn = document.getElementById(`btn`)
-let input1 = document.getElementById(`input1`)
-let input2 = document.getElementById(`input2`)
-let input11 = document.getElementById(`input11`)
+// let btn = document.getElementById(`btn`)
+// let input1 = document.getElementById(`input1`)
+// let input2 = document.getElementById(`input2`)
+// let input11 = document.getElementById(`input11`)
 
-btn.onclick = ev => {
-    console.log(input1.value);
-    console.log(input2.value);
-    console.log(input11.value);
-    console.log(input22.value);
+// btn.onclick = ev => {
+//     console.log(input1.value);
+//     console.log(input2.value);
+//     console.log(input11.value);
+//     console.log(input22.value);
 
-    
-}
+
+// }
 
 
 // - Створити функцію, яка генерує таблицю.
 // Перший аргумент визначає кількість строк.
 // Другий параметр визначає кліькіть ячеєк в кожній строці.
 // Третій параметр визначає елемент в який потрібно таблицю додати.
+let div = document.getElementById(`id`)
+
+function createTable(rows,cels,tag){
+    let table = document.createElement(`table`)
+    for (let i = 0; i < rows; i++) {
+        let tr = document.createElement(`tr`)
+
+        for (let a = 0; a < cels; a++) {
+            let td = document.createElement(`td`)
+            td.innerHTML = i+ ' ' + a;
+
+            tr.appendChild(td)
+        }
+        table.appendChild(tr)
+    }
+    tag.appendChild(table)
+}
+
+createTable(4,5,div)
 
 
 // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
