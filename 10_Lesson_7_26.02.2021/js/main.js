@@ -162,32 +162,35 @@
 // Перший аргумент визначає кількість строк.
 // Другий параметр визначає кліькіть ячеєк в кожній строці.
 // Третій параметр визначає елемент в який потрібно таблицю додати.
-let div = document.getElementById(`id`)
+// let content = document.getElementById(`content`)
 
-function createTable(rows,cels,tag){
-    let table = document.createElement(`table`)
-    for (let i = 0; i < rows; i++) {
-        let tr = document.createElement(`tr`)
+// function createTable(rows,cels,tag){
+//     let table = document.createElement(`table`)
+//     for (let i = 0; i < rows; i++) {
+//         let tr = document.createElement(`tr`)
 
-        for (let a = 0; a < cels; a++) {
-            let td = document.createElement(`td`)
-            td.innerHTML = i+ ' ' + a;
+//         for (let a = 0; a < cels; a++) {
+//             let td = document.createElement(`td`)
+//             td.innerText = i.toString() + a.toString()
 
-            tr.appendChild(td)
-        }
-        table.appendChild(tr)
-    }
-    tag.appendChild(table)
-}
+//             tr.appendChild(td)
+//         }
+//         table.appendChild(tr)
+//     }
+//     tag.appendChild(table)
+// }
 
-createTable(4,5,div)
+// createTable(4,5,content)
 
 
-// - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
-// При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+// - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - 
+//кількість ячеєк, третій вмиіст ячеєк.
+// При натисканні кнопки, вся ця інформація зчитується і формується табличка, 
+//з відповідним вмістом.
 // (Додатковачастина для завдання)
 
-// - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
+// - Напишите «Карусель» – ленту изображений, 
+//которую можно листать влево-вправо нажатием на стрелочки.
 
 
 // - Сворити масив не цензцрних слів.
