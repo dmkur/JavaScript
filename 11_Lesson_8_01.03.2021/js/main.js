@@ -12,8 +12,9 @@ fetch('https://api.sampleapis.com/futurama/characters')
         
         imgHero.src = `${hero.images.main}`
 
-        anchor.innerText = `${hero.id} - ${hero.name.first} - ${hero.name.last}`
-        anchor.href = `#`
+        //anchor.innerText = `${hero.id} - ${hero.name.first} - ${hero.name.last}`*
+        anchor.innerText = `Who am I?`
+        anchor.href = `charectersInfo.html?name=${hero.name.first}&lastname=${hero.name.last}&full=${JSON.stringify(hero)}`
 
 
         info.appendChild(anchor)
