@@ -13,96 +13,113 @@
 
 
 
-let random = Math.random()
-let msg = `H`
+// let random = Math.random()
+// let msg = `H`
 
-let promis = new Promise(resolve => {
-    setTimeout(()=>{
-        resolve(`H`)
-    },random)
-})
+// let promis = new Promise(resolve => {
+//     setTimeout(()=>{
+//         resolve(`H`)
+//     },random)
+// })
 
-promis.then((result)=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(`H`)
-            console.log(result);
-        },random)
-    })
-}).then((result) =>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(result +=`e`)
-            console.log(result);
-        },random)
-    })
-}).then(result=>{
-    return new Promise(resolve =>{
-        setTimeout(()=>{
-            resolve(result+= `l`)
-            console.log(result);
-        },random)
-    })
-}).then(result =>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(result+=`l`)
-            console.log(result);
-        },random)
-    })
-}).then(result=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(result+=`o`)
-            console.log(result);
-        },random)
-    })
-}).then(result=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(result+=` `)
-        },random)
-    })
-}).then(result=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(result+=`W`)
-            console.log(result);
-        },random)
-    })
-}).then(result=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(result+=`o`)
-            console.log(result);
-        },random)
-    })
-}).then(result=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(result+=`r`)
-            console.log(result);
-        },random)
-    })
-}).then(value =>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(value+=`l`)
-            console.log(value);
-        },random)
-    })
-}).then(value=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(value+=`d`)
-            console.log(value);
-        },random)
-    })
-}).then(value=>{
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(value+=`!`)
-            console.log(value);
-        },random)
-    })
-})
+// promis.then((result)=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(`H`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then((result) =>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result +=`e`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(resolve =>{
+//         setTimeout(()=>{
+//             resolve(result+= `l`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result =>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`l`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`o`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=` `)
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`W`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`o`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`r`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(value =>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(value+=`l`)
+//             console.log(value);
+//         },random)
+//     })
+// }).then(value=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(value+=`d`)
+//             console.log(value);
+//         },random)
+//     })
+// }).then(value=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(value+=`!`)
+//             console.log(value);
+//         },random)
+//     })
+// })
+
+// *** за допомогою fetch (як в прикладі) отримати від 
+//jsonplaceholder всі users.
+//  За допомогою document.createElement вивести їх в браузер.
+//  Помістити кожен окремий об'єкт в блок, при цьому кожен 
+//внутрішній об'єкт в свій блок (блок в блоці).
+
+
+
+
+
+
+
+
+
+
+
