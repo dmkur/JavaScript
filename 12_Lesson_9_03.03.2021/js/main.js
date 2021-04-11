@@ -114,12 +114,75 @@
 //внутрішній об'єкт в свій блок (блок в блоці).
 
 
+// fetch(`https://jsonplaceholder.typicode.com/users`)
+// .then(response => response.json())
+// .then(user => {
+//     user.forEach(item => {
+//         console.log(item);
+       
+//         let div2 = document.createElement(`div`)
+//         let div3 = document.createElement(`div`)
+//         let div4 = document.createElement(`div`)
+
+//         div2.innerText = JSON.stringify(item)
+//         div2.style.margin = `20px`
+
+//         div3.innerText = JSON.stringify(item.address)
+//         div4.innerText = JSON.stringify(item.company)
 
 
+//         div2.appendChild(div3)
+//         div2.appendChild(div4)
+//         document.body.appendChild(div2)
+//     });
+// })
 
 
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder 
+//всі posts.
+// За допомогою document.createElement вивести їх в браузер.
+// Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній 
+//об'єкт(якщо він існує) в свій блок (блок в блоці).
 
+// fetch(`https://jsonplaceholder.typicode.com/posts`)
+// .then(posts => posts.json())
+// .then(value =>{
+//     console.log(value);
+//     value.forEach(element => {
+//         let div = document.createElement(`div`)
+//         let div2 = document.createElement(`div`)
+//         let div3 = document.createElement(`div`)
 
+//         div.innerText = `id-${element.id}`
+//         div.style.marginBottom = `20px`
 
+//         div2.innerText = `body - ${element.body}`
+//         div3.innerText = `title - ${element.title}`
 
+//         div.appendChild(div2)
+//         div.appendChild(div3)
+//         document.body.appendChild(div)
+//     });
 
+// })
+
+// ****** при помощи fetch (как в примере) получить от jsonplaceholder 
+// все posts.
+// Внутри последнего then() сделать еще один fetch который сделает запрос 
+// и получит все comments.
+// Объеденить соответсвующий post с соответсвующими comment и вывести в 
+// браузер.
+// Подсказка : в каждом comment есть поле postId которое определяет какой 
+// комментарий принадлежит какому посту
+
+fetch(`https://jsonplaceholder.typicode.com/posts`)
+.then(posts => posts.json())
+.then(item =>{
+    console.log(item);
+    return fetch(`https://jsonplaceholder.typicode.com/comments`)
+})
+.then(item=>item.json())
+.then(item =>{
+    console.log(item);
+    return fetch(`https://jsonplaceholder.typicode.com/comments=`+item.id    )
+})
