@@ -186,3 +186,4 @@ fetch(`https://jsonplaceholder.typicode.com/posts`)
     console.log(item);
     return fetch(`https://jsonplaceholder.typicode.com/comments=`+item.id    )
 })
+lolS
