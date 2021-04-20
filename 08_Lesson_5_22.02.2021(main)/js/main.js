@@ -59,6 +59,28 @@
 // let a = new Tag(title,action,attibytes)
 // console.log(a);
 
+//=============================================
+//повторення
+// function SomeTagDescr(titleTag,action,atters){
+//     this.titleTag = titleTag
+//     this.action = action
+//     this.atters = atters
+// }
+
+// let titleTag = `span`
+// let action = `Тег <span> предназначен для определения строчных элементов документа.`
+// let atters = [
+//     {actionName:`accesskey`,attersAction:`Позволяет получить доступ к элементу Позволяетс помощью заданного сочетания клавиш.`},
+//     {actionName:`class`,attersAction:`Определяет имя класса, которое позволяет связать тег со стилевым оформлением.`},
+//     {actionName:`accesskey`,attersAction:`Позволяет получить доступ к элементу с помощью заданного сочетания клавиш.`},
+// ]
+
+
+// let b = new SomeTagDescr(titleTag,action,atters)
+// console.log(b);
+//повторення
+//=============================================
+
 // ==============================================
 // -  Створити класс  для об'єкту який описує теги
 // Властивості
@@ -112,6 +134,29 @@
 
 // let a = new Tag(title,action,attibytes)
 // console.log(a);
+//================================
+//повторення
+
+// class DescribeTag{
+//     constructor(a,b,c){
+//         this.a = a
+//         this.b = b
+//         this.c = c
+//     }
+// }
+
+// let tagName = `input`
+// let tagAction = `Тег <input> является одним из разносторонних элементов формы`
+// let tagAtters = [
+//     {attersName:`accept`,attersAction:`Устанавливает фильтр на типы файлов`},
+//     {attersName:`accept`,attersAction:`Устанавливает фильтр на типы файлов`},
+//     {attersName:`accept`,attersAction:`Устанавливает фильтр на типы файлов`},
+//     {attersName:`accept`,attersAction:`Устанавливает фильтр на типы файлов`},
+// ]
+
+// let c = new DescribeTag(tagName,tagAction,tagAtters)
+// console.log(c);
+//==================================
 
 
 // ==============================================
@@ -367,45 +412,45 @@
 
 
 
-let cinderellas1 = new Cinderella(`Lola`,22,37)
-let cinderellas2 = new Cinderella(`Olga`,23,35.6)
-let cinderellas3 = new Cinderella(`Ania`,21,36.7)
-let cinderellas4 = new Cinderella(`Helga`,19,38)
-let cinderellas5 = new Cinderella(`Iryna`,33,37.5)
-let cinderellas6 = new Cinderella(`Pola`,26,36)
-let cinderellas7 = new Cinderella(`Lila`,22,38)
-let cinderellas8 = new Cinderella(`Lilia`,20,38.8)
-let cinderellas9 = new Cinderella(`Natalka`,24,35)
-let cinderellas10 = new Cinderella(`Diana`,25,36)
+// let cinderellas1 = new Cinderella(`Lola`,22,37)
+// let cinderellas2 = new Cinderella(`Olga`,23,35.6)
+// let cinderellas3 = new Cinderella(`Ania`,21,36.7)
+// let cinderellas4 = new Cinderella(`Helga`,19,38)
+// let cinderellas5 = new Cinderella(`Iryna`,33,37.5)
+// let cinderellas6 = new Cinderella(`Pola`,26,36)
+// let cinderellas7 = new Cinderella(`Lila`,22,38)
+// let cinderellas8 = new Cinderella(`Lilia`,20,38.8)
+// let cinderellas9 = new Cinderella(`Natalka`,24,35)
+// let cinderellas10 = new Cinderella(`Diana`,25,36)
 
-let allCindelellas = [cinderellas1,cinderellas2,cinderellas3,cinderellas4,cinderellas5,cinderellas6,cinderellas7,cinderellas8,cinderellas9,cinderellas10]
+// let allCindelellas = [cinderellas1,cinderellas2,cinderellas3,cinderellas4,cinderellas5,cinderellas6,cinderellas7,cinderellas8,cinderellas9,cinderellas10]
 
-function Cinderella(name,age,footSize){
-    this.name = name
-    this.age = age
-    this.footSize = footSize
-}
+// function Cinderella(name,age,footSize){
+//     this.name = name
+//     this.age = age
+//     this.footSize = footSize
+// }
 
-function Princ(name,age,shoetSize){
-    this.name = name
-    this.age = age
-    this.shoetSize = shoetSize
+// function Princ(name,age,shoetSize){
+//     this.name = name
+//     this.age = age
+//     this.shoetSize = shoetSize
 
-    this.findCinderella = function(array){
-        let item = null
-        for (const host of array) {
-            if(host.footSize === this.shoetSize){
-                item = host
-            }
-        }
-        if(item){
-            console.log(`Wow you my cinderella ${item.name}`);
-        }else{
-            console.log(`Opps`);
-        }
-    }
-}
+//     this.findCinderella = function(array){
+//         let item = null
+//         for (const host of array) {
+//             if(host.footSize === this.shoetSize){
+//                 item = host
+//             }
+//         }
+//         if(item){
+//             console.log(`Wow you my cinderella ${item.name}`);
+//         }else{
+//             console.log(`Opps`);
+//         }
+//     }
+// }
 
-let a = Princ(`los`,21, 37)
-findCinderella(allCindelellas)
-lol
+// let a = Princ(`los`,21, 37)
+// findCinderella(allCindelellas)
+
