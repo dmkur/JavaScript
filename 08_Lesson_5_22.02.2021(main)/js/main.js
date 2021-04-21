@@ -169,36 +169,41 @@
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
 //повторення=============================================
-let car = {
-    model:`M3`,
-    producer:`Mazda`,
-    year:2003,
-    maxSpeed:180,
-    volume:2.0,
-    drive:()=>console.log(`їдемо зі швидкістю ${this.maxSpeed} кm/год`),
-    info:function(){
-        console.log(`
-        model:${this.model}
-        producer:${this.producer}
-        maxSpeed:${this.maxSpeed}
-        year:${this.year}
-        volume:${this.volume}
-        `);
-    },
-    increaseMaxSpeed:function(newSpeed,cb){
-        this.maxSpeed+=newSpeed
-        cb = this.info()
-    }
-}
-car.drive()
-car.info()
-car.increaseMaxSpeed(200)
+// let car = {
+//     model:`M3`,
+//     producer:`Mazda`,
+//     year:2003,
+//     maxSpeed:180,
+//     volume:2.0,
+//     drive:()=>console.log(`їдемо зі швидкістю ${this.maxSpeed} кm/год`),
+//     info:function(){
+//         console.log(`
+//         model:${this.model}
+//         producer:${this.producer}
+//         maxSpeed:${this.maxSpeed}
+//         year:${this.year}
+//         volume:${this.volume}
+//         `);
+//     },
+//     increaseMaxSpeed:function(newSpeed){
+//         this.maxSpeed+=newSpeed
+//         this.info()
+//     },
+//     changeYear: function(newValue){
+//         this.year = newValue
+//         this.info()
+//     },
+//     addDriver: function(name,age){
+//         this.driver = {nameDriver:`${name}`, age:`${age}`}
 
-
-
-
-
-
+//     }
+// }
+// car.drive()
+// car.info()
+// car.increaseMaxSpeed(200)
+// car.changeYear(2020)
+// car.addDriver(`oleg`,29)
+// console.log(car);
 //повторення=============================================
 
 
@@ -250,13 +255,69 @@ car.increaseMaxSpeed(200)
 
 
 // ==============================================
-// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, 
+//рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
 // -- info () - яка виводить всю інформацію про автомобіль
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в 
+//поточний об'єкт car
 // ==============================================
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//повторення
+// function Car(model, producer, year, maxSpeed, volume){
+//     this.model = model
+//     this.producer = producer
+//     this.year = year
+//     this.maxSpeed = maxSpeed
+//     this.volume = volume
+
+
+//     this.driver = function(){
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed}км на годину`)
+//     }
+//     this.info = function(){
+//         console.log(`
+//         model - ${this.model}
+//         year - ${this.year}
+//         producer - ${this.producer}
+//         maxSpeed - ${this.maxSpeed}
+//         `);
+//     }
+//     this.icreaseSpeed = function(newSpeed){
+//         this.maxSpeed+=newSpeed
+//         this.info()
+//     }
+
+//     this.changeYear = function(newYear){
+//         this.year = newYear
+//         this.info()
+//     }
+//     this.addDriver = function(shofer){
+//         this.newDriver = shofer
+//     }
+// }
+
+// let a = new Car(`Audi-A6`,`Volkswagen Group`,2004,265,2)
+
+// a.info()
+// a.driver()
+// a.changeYear(2020)
+// a.icreaseSpeed(50)
+// a.addDriver({driverName:`Alex`,age:22})
+// console.log(a);
+
+//повторення
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
 
 // function Car(model, producer, year, maxSpeed, engineVolume) {
 //     this.model = model
@@ -314,12 +375,67 @@ car.increaseMaxSpeed(200)
 
 
 // ==============================================
-// - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, 
+//рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
 // -- info () - яка виводить всю інформацію про автомобіль
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// ==============================================
+// ==============================================
+//repeat
+//     class Car{
+//         constructor(model,producer,year,maxSpeed,volume){
+//             this.model = model
+//             this.producer = producer
+//             this.year = year
+//             this.maxSpeed = maxSpeed
+//             this.volume = volume
+//         }
+
+//         drive(){
+//             console.log(`їдемо зі швидкістю ${this.maxSpeed} км на годину`);
+//             this.info()
+//         }
+
+//         info(){
+//             console.log(`
+//             model:${this.model}
+//             producer:${this.producer}
+//             year:${this.year}
+//             maxSpeed:${this.maxSpeed}
+//             engineVolume:${this.volume}
+//             `);
+//         }
+
+//         changeYear(newYear){
+//             this.year = newYear
+//             this.info()
+//         }
+
+//         increaseSpeed(newValue){
+//             this.maxSpeed += newValue
+//             this.info()
+//             this.drive()
+//         }
+
+//         addDriver(array){
+//             this.driver = array
+//             console.log(this);
+//         }
+//     }
+
+// let a = new Car(`A5`, `Audi`, 2001, 220, 1.8)
+// a.drive()
+// a.changeYear(2025)
+// a.increaseSpeed(500)
+// a.addDriver({name:`Oleg`,age:22})
+
+
+
+
+//repeat
 // ==============================================
 
 // class Car{
@@ -384,6 +500,7 @@ car.increaseMaxSpeed(200)
 // --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
 // ==============================================
+//repeat
 // class Human{
 //     constructor(name,age){
 //         this.name = name
@@ -393,11 +510,66 @@ car.increaseMaxSpeed(200)
 
 
 // class Cinderella extends Human{
+//     constructor(name,age,footSize){
+//         super(name, age)
+//         this.footSize = footSize
+//     }
+// }
+
+// noteOfCinderelas =[
+//     {name:`Olga`, age: 22, footSize: 36},
+//     {name:`Anet`, age: 21, footSize: 37},
+//     {name:`Lola`, age: 25, footSize: 37.5},
+//     {name:`Nonila`, age: 26, footSize: 35},
+//     {name:`Astra`, age: 23, footSize: 37.5},
+//     {name:`Helga`, age: 27, footSize: 36.5},
+// ] 
+//  class Princ extends Human{
+//     constructor(name,age,shoeSize){
+//         super(name,age)
+//         this.shoeSize = shoeSize
+//     }
+//     findCinderella(array){
+//        for (const i of array) {
+//             if(i.footSize === this.shoeSize){
+//                 console.log(`Hello my ${i.name} I found you`);
+//             } 
+//        }
+//     }
+//  } 
+// let a = new Princ(`John`, 25, 37.5)
+// a.findCinderella(noteOfCinderelas)
+
+
+
+//repeat
+// ==============================================
+
+
+
+
+
+
+
+
+
+
+
+// class Human{
+//     constructor(name,age){
+//         this.name = name
+//         this.age = age
+//     }    
+// }
+
+
+// class Cinderella extends Human{
 //     constructor(name,age, footSize){    
 //         super(name,age)
 //         this.footSize = footSize 
 //     }
 // }
+
 
 
 // class Princ extends Human{
