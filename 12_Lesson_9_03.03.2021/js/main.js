@@ -187,7 +187,7 @@
 //     })
 // })
 
-// *** за допомогою fetch (як в прикладі) отримати від 
+//  за допомогою fetch (як в прикладі) отримати від 
 //jsonplaceholder всі users.
 //  За допомогою document.createElement вивести їх в браузер.
 //  Помістити кожен окремий об'єкт в блок, при цьому кожен 
@@ -234,7 +234,7 @@
 // })
 
 
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder 
+//  за допомогою fetch (як в прикладі) отримати від jsonplaceholder 
 //всі posts.
 // За допомогою document.createElement вивести їх в браузер.
 // Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній 
@@ -262,7 +262,7 @@
 
 // })
 
-// ****** при помощи fetch (как в примере) получить от jsonplaceholder 
+//  при помощи fetch (как в примере) получить от jsonplaceholder 
 // все posts.
 // Внутри последнего then() сделать еще один fetch который сделает запрос 
 // и получит все comments.
@@ -271,21 +271,38 @@
 // Подсказка : в каждом comment есть поле postId которое определяет какой 
 // комментарий принадлежит какому посту
 
-fetch(`https://jsonplaceholder.typicode.com/posts`)
-.then(value=>value.json())
-.then(posts=>{
-   for (const itemPost of posts) {
-       itemPost.comment = []
-       fetch(`https://jsonplaceholder.typicode.com/comments`)
-       .then(value=>value.json())
-       .then(comment => {
-           for (const itemComment of comment) {
-              if(itemPost.id === itemComment.postId){
-                  itemPost.comment.push(itemComment)
-              }              
-           }
-           
-       })
 
-   }    
-})
+// fetch(`https://jsonplaceholder.typicode.com/posts`)
+// .then(value=>value.json())
+// .then(posts=>{
+//     //console.log(posts);  array of 100 posts
+//     for (const i of posts) {
+//         //console.log(i);
+//         i.comments = []
+
+//         fetch(`https://jsonplaceholder.typicode.com/comments`) //звернення до усіх коментарів
+//         .then(value=>value.json())
+//         .then(comments=>{
+//             for (const a of comments) {
+//                 // console.log(a);
+//                 if(i.id === a.postId){
+//                     i.comments.push(a)
+//                 }
+//             }
+//             let div = document.createElement(`div`)
+//             let ul  = document.createElement(`ul`)
+
+
+//             div.innerText = `post id - ${i.id} - ${i.title}`
+//             for (const f of i.comments) {
+//                 let li = document.createElement(`li`)
+//                 li.innerText = f.body
+
+//                 ul.appendChild(li)
+//             }
+            
+//             div.appendChild(ul)
+//             document.body.appendChild(div)
+//         })
+//     }
+// })
