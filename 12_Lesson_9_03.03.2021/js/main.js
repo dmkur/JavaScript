@@ -12,6 +12,86 @@
 // о (затримка 1)
 
 
+// повторення==========================================
+// let random = Math.random()
+// new Promise (resolve => {
+//     setTimeout(()=>{
+//         resolve(`H`)
+//         console.log();
+//     },random)
+// }).then(result=>{
+//     return new Promise (resolve=>{
+//         setTimeout(()=>{
+//             resolve(result)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(item=>{
+//     return new Promise (good=>{
+//         setTimeout(()=>{
+//             good(item += `e`)
+//             console.log(item);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise (resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`l`)
+//             console.log(result);
+//         },random)       
+//     })    
+// }).then(result=>{
+//     return new Promise (resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`l`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result =>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(result+=`o`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(resolve =>{
+//         setTimeout(()=>{
+//             resolve(result+=` W`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(value => {
+//     return new Promise(resolve =>{
+//         setTimeout(()=>{
+//             resolve(value+=`o`)
+//             console.log(value);
+//         },random)
+//     })
+// }).then(result=>{
+//     return new Promise(value=>{
+//         setTimeout(()=>{
+//             value(result+=`r`)
+//             console.log(result);
+//         },random)
+//     })
+// }).then(value=>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(value+=`l`)
+//             console.log(value);
+//         },random)
+//     })
+// }).then(element=>{
+//     return new Promise(value=>{
+//         setTimeout(()=>{
+//             value(element+=`d`)
+//             console.log(element);
+//         },random)
+//     })
+// })
+// повторення==========================================
+
 
 // let random = Math.random()
 // let msg = `H`
@@ -112,7 +192,21 @@
 //  За допомогою document.createElement вивести їх в браузер.
 //  Помістити кожен окремий об'єкт в блок, при цьому кожен 
 //внутрішній об'єкт в свій блок (блок в блоці).
+// ==========================повторення
+fetch(`https://jsonplaceholder.typicode.com/users`)
+.then(result=> result.json())
+.then(result =>{
+    result.forEach(element => {
+        let divGeneral = document.createElement(`div`)
+        let div = document.createElement(`div`)
 
+
+
+        document.body.appendChild(divGeneral)
+    });
+    
+})
+// ==========================повторення
 
 // fetch(`https://jsonplaceholder.typicode.com/users`)
 // .then(response => response.json())
@@ -175,15 +269,15 @@
 // Подсказка : в каждом comment есть поле postId которое определяет какой 
 // комментарий принадлежит какому посту
 
-fetch(`https://jsonplaceholder.typicode.com/posts`)
-.then(posts => posts.json())
-.then(item =>{
-    console.log(item);
-    return fetch(`https://jsonplaceholder.typicode.com/comments`)
-})
-.then(item=>item.json())
-.then(item =>{
-    console.log(item);
-    return fetch(`https://jsonplaceholder.typicode.com/comments=`+item.id    )
-})
-lolS
+// fetch(`https://jsonplaceholder.typicode.com/posts`)
+// .then(posts => posts.json())
+// .then(item =>{
+//     console.log(item);
+//     return fetch(`https://jsonplaceholder.typicode.com/comments`)
+// })
+// .then(item=>item.json())
+// .then(item =>{
+//     console.log(item);
+//     return fetch(`https://jsonplaceholder.typicode.com/comments=`+item.id    )
+// })
+// lolS
