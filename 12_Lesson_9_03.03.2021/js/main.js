@@ -193,19 +193,21 @@
 //  Помістити кожен окремий об'єкт в блок, при цьому кожен 
 //внутрішній об'єкт в свій блок (блок в блоці).
 // ==========================повторення
-fetch(`https://jsonplaceholder.typicode.com/users`)
-.then(result=> result.json())
-.then(result =>{
-    result.forEach(element => {
-        let divGeneral = document.createElement(`div`)
-        let div = document.createElement(`div`)
+// fetch(`https://jsonplaceholder.typicode.com/users`)
+// .then(result=> result.json())
+// .then(result =>{
+//     let divGeneral = document.createElement(`div`)
+//     document.body.appendChild(divGeneral)
+//     result.forEach(element => {
+//         let div = document.createElement(`div`)
+
+//         div.innerText = JSON.stringify(element)
 
 
-
-        document.body.appendChild(divGeneral)
-    });
+//         divGeneral.appendChild(div)
+//     });І
     
-})
+// })
 // ==========================повторення
 
 // fetch(`https://jsonplaceholder.typicode.com/users`)
@@ -269,15 +271,21 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
 // Подсказка : в каждом comment есть поле postId которое определяет какой 
 // комментарий принадлежит какому посту
 
-// fetch(`https://jsonplaceholder.typicode.com/posts`)
-// .then(posts => posts.json())
-// .then(item =>{
-//     console.log(item);
-//     return fetch(`https://jsonplaceholder.typicode.com/comments`)
-// })
-// .then(item=>item.json())
-// .then(item =>{
-//     console.log(item);
-//     return fetch(`https://jsonplaceholder.typicode.com/comments=`+item.id    )
-// })
-// lolS
+fetch(`https://jsonplaceholder.typicode.com/posts`)
+.then(value=>value.json())
+.then(posts=>{
+   for (const itemPost of posts) {
+       itemPost.comment = []
+       fetch(`https://jsonplaceholder.typicode.com/comments`)
+       .then(value=>value.json())
+       .then(comment => {
+           for (const itemComment of comment) {
+              if(itemPost.id === itemComment.postId){
+                  itemPost.comment.push(itemComment)
+              }              
+           }
+           
+       })
+
+   }    
+})
